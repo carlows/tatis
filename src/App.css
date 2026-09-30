@@ -143,6 +143,83 @@ body {
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ---- Tres en raya ---- */
+
+.title-game {
+  font-size: clamp(1.9rem, 5.5vw, 3.2rem);
+  line-height: 1.12;
+}
+
+.game-sub {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #b03a72;
+  font-style: italic;
+}
+
+.ttt {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.ttt-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #46121f;
+  min-height: 1.4em;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  background: rgba(70, 18, 31, 0.12);
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px rgba(70, 18, 31, 0.2);
+}
+
+.board[data-locked='true'] {
+  pointer-events: none;
+}
+
+.cell {
+  width: clamp(4.5rem, 18vw, 6rem);
+  height: clamp(4.5rem, 18vw, 6rem);
+  border: none;
+  border-radius: 1rem;
+  background: #fff;
+  font-size: clamp(2rem, 9vw, 3rem);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.cell:hover:not(:disabled) {
+  transform: scale(1.06);
+  background: #fff0f6;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cell-win {
+  background: #ffd6e8;
+  animation: cell-pop 0.5s ease infinite alternate;
+}
+
+@keyframes cell-pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
 /* ---- Emoji burst on Sí ---- */
 
 .burst {
