@@ -122,7 +122,7 @@ function CuteCat() {
 // Shown after each failed attempt, escalating; sticks on the last one.
 const LOSS_TAUNTS = [
   'Uy yo creo que te vas a tener que esforzar más...',
-  'Los peruanos se rinden tan fácil?',
+  '¿Las rolitas se rinden tan fácil?',
   'No me digas que eres tan mala en tres en raya 🤨',
   'Ni siquiera tuve que abrir los ojos jajajajajajaja',
   'Ya deja de estar pensando en mí y concéntrate',
@@ -296,7 +296,7 @@ function App() {
       {phase === 'play' && (
         <main className="content">
           <h1 className="title title-game">
-            No creías que soy tan fácil, o sí?
+            ¿No creías que iba a ser tan fácil, o sí?
           </h1>
           <p className="game-sub">
             Primero tienes que ganarme en tres en raya ;)
